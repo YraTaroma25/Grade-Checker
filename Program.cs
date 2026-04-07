@@ -6,23 +6,28 @@ namespace GradeApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Student Grade Checker");
+            Console.WriteLine("Advanced Grade Checker");
 
             Console.Write("Enter your exam score (0-100): ");
             string input = Console.ReadLine();
-
             int score = Convert.ToInt32(input);
 
-            if (score >= 75)
+            if (score >= 90)
+            {
+                Console.WriteLine("\nResult: PASSED WITH DISTINCTION!");
+                Console.WriteLine("Excellent performance! You're at the top of the class.");
+            }
+            else if (score >= 75)
             {
                 Console.WriteLine("\nResult: PASSED");
-                Console.WriteLine("Great job! Keep up the hard work.");
+                Console.WriteLine("Good job! You met the requirements.");
             }
             else
             {
                 Console.WriteLine("\nResult: FAILED");
-                Console.WriteLine("Don't give up! Review the materials and try again.");
+                Console.WriteLine("Please schedule a consultation with the instructor.");
             }
+
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey();
         }
